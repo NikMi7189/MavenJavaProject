@@ -38,6 +38,9 @@ public class Main {
                 studList = new StudentListXML(xmlFileName);
                 break;
             } else if (choice == 5) {
+                System.out.print("Введите название файла JSON: ");
+                String jsonFileName = scanner.next();
+                studList = new StudentListXML(jsonFileName);
                 break;
             } else if (choice == 6) {
                 System.exit(0);

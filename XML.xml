@@ -1,0 +1,23 @@
+<students>
+  <student>
+    <id>6</id>
+    <firstName>ывальывдла</firstName>
+    <lastName>ываьывлда</lastName>
+    <partonymicName>вылдаьывлдаь</partonymicName>
+    <group>ывдлаьылдва</group>
+  </student>
+  <student>
+    <id>1</id>
+    <firstName>фывдьфылдвь</firstName>
+    <lastName>ваьдпльвалдп</lastName>
+    <partonymicName>ывадлпьывалдп</partonymicName>
+    <group>аывпльлд</group>
+  </student>
+  <student>
+    <id>8</id>
+    <firstName>ывлдьталдываь</firstName>
+    <lastName>выдлаьывлда</lastName>
+    <partonymicName>вылдаьылдваь</partonymicName>
+    <group>выдлаьлд</group>
+  </student>
+</students>

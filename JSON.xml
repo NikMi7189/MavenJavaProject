@@ -1,0 +1,23 @@
+<students>
+  <student>
+    <id>5</id>
+    <firstName>fdslkmfkls</firstName>
+    <lastName>dflkgmdfkl</lastName>
+    <partonymicName>dflkgmfldk</partonymicName>
+    <group>dflgmkl</group>
+  </student>
+  <student>
+    <id>6</id>
+    <firstName>fslkdmflksd</firstName>
+    <lastName>sfksmdfklsd</lastName>
+    <partonymicName>sdflkmsdklf</partonymicName>
+    <group>sdlkfmsdlkfm</group>
+  </student>
+  <student>
+    <id>84</id>
+    <firstName>sdlkmflkd</firstName>
+    <lastName>dsfglkmsdflkg</lastName>
+    <partonymicName>sdfglkmsdfklg</partonymicName>
+    <group>sdfgklsdmfgkldf</group>
+  </student>
+</students>
