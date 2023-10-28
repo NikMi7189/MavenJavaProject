@@ -40,7 +40,7 @@ public class Main {
             } else if (choice == 5) {
                 System.out.print("Введите название файла JSON: ");
                 String jsonFileName = scanner.next();
-                studList = new StudentListXML(jsonFileName);
+                studList = new StudentListJSON(jsonFileName);
                 break;
             } else if (choice == 6) {
                 System.exit(0);
