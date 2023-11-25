@@ -8,6 +8,7 @@ public class StudentListFile implements StudentList {
     private String directory;
     private String format = ".txt";
     private List<Student> students;
+    private final String logFileName = "logFile";
 
     public StudentListFile(String directoryName) {
         this.directory = System.getProperty("user.dir") + File.separator + directoryName;
@@ -113,7 +114,7 @@ public class StudentListFile implements StudentList {
                 return new Student(id, firstName, lastName, partonymicName, group);
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            ErrorHandler.handleException(e, "Ошибка при загрузке данных из файла");
         }
 
         return null;
@@ -132,7 +133,7 @@ public class StudentListFile implements StudentList {
             writer.newLine();
             writer.write("Group: " + student.getGroup());
         } catch (IOException e) {
-            e.printStackTrace();
+            ErrorHandler.handleException(e, "Ошибка при сохранении данных в файл");
         }
     }
 

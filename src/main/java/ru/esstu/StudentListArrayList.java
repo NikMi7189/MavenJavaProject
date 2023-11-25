@@ -17,40 +17,56 @@ public class StudentListArrayList implements StudentList {
 
     @Override
     public void add(Student student) {
-        students.add(student);
+        try {
+            students.add(student);
+        } catch (Exception e) {
+            ErrorHandler.handleException(e, "Ошибка при добавлении студента в список");
+        }
     }
 
     @Override
     public Student getById(String id) {
-        for (Student student : students) {
-            if (student.getId().equals(id)) {
-                return student;
+        try {
+            for (Student student : students) {
+                if (student.getId().equals(id)) {
+                    return student;
+                }
             }
+        } catch (Exception e) {
+            ErrorHandler.handleException(e, "Ошибка при получении студента по ID из списка");
         }
         return null;
     }
 
     @Override
     public void delete(String id) {
-        Student studentToRemove = null;
-        for (Student student : students) {
-            if (student.getId().equals(id)) {
-                studentToRemove = student;
-                break;
+        try {
+            Student studentToRemove = null;
+            for (Student student : students) {
+                if (student.getId().equals(id)) {
+                    studentToRemove = student;
+                    break;
+                }
             }
-        }
-        if (studentToRemove != null) {
-            students.remove(studentToRemove);
+            if (studentToRemove != null) {
+                students.remove(studentToRemove);
+            }
+        } catch (Exception e) {
+            ErrorHandler.handleException(e, "Ошибка при удалении студента из списка");
         }
     }
 
     @Override
     public void update(Student student) {
-        for (int i = 0; i < students.size(); i++) {
-            if (students.get(i).getId().equals(student.getId())) {
-                students.set(i, student);
-                break;
+        try {
+            for (int i = 0; i < students.size(); i++) {
+                if (students.get(i).getId().equals(student.getId())) {
+                    students.set(i, student);
+                    break;
+                }
             }
+        } catch (Exception e) {
+            ErrorHandler.handleException(e, "Ошибка при обновлении студента в списке");
         }
     }
 }

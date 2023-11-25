@@ -1,5 +1,6 @@
 package ru.esstu;
 
+import java.io.IOException;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -9,6 +10,7 @@ public class StudentListDatabase implements StudentList {
     private final String username;
     private final String password;
     private Connection connection;
+    private String logFileName = "logDatabase";
 
     public StudentListDatabase(String jdbcUrl, String username, String password) {
         this.jdbcUrl = jdbcUrl;
@@ -21,7 +23,7 @@ public class StudentListDatabase implements StudentList {
         try {
             return DriverManager.getConnection(jdbcUrl, username, password);
         } catch (SQLException e) {
-            e.printStackTrace();
+            ErrorHandler.handleException(e, "Не удалось установить соединение с БД");
             throw new RuntimeException("Не удалось установить соединение с БД");
         }
     }
@@ -42,7 +44,7 @@ public class StudentListDatabase implements StudentList {
                 students.add(new Student(id, firstName, lastName, partonymicName, group));
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            ErrorHandler.handleException(e, "Ошибка при получении списка студентов");
         }
         return students;
     }
@@ -60,7 +62,7 @@ public class StudentListDatabase implements StudentList {
 
             statement.executeUpdate();
         } catch (SQLException e) {
-            e.printStackTrace();
+            ErrorHandler.handleException(e, "Ошибка при добавлении студента");
         }
     }
 
@@ -80,7 +82,7 @@ public class StudentListDatabase implements StudentList {
                 return new Student(id, firstName, lastName, partonymicName, group);
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            ErrorHandler.handleException(e, "Ошибка при получении студента по ID");
         }
         return null;
     }
@@ -92,7 +94,7 @@ public class StudentListDatabase implements StudentList {
             statement.setString(1, id);
             statement.executeUpdate();
         } catch (SQLException e) {
-            e.printStackTrace();
+            ErrorHandler.handleException(e, "Ошибка при удалении студента");
         }
     }
 
@@ -107,7 +109,7 @@ public class StudentListDatabase implements StudentList {
             statement.setString(5, student.getId());
             statement.executeUpdate();
         } catch (SQLException e) {
-            e.printStackTrace();
+            ErrorHandler.handleException(e, "Ошибка при обновлении студента");
         }
     }
 }

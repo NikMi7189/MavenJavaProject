@@ -107,7 +107,7 @@ public class Main {
 
         Student student = new Student(id, firstName, lastName, patronymicName, group);
         studentList.add(student);
-        System.out.println("Студент добавлен.");
+        System.out.println("Студент добавлен");
     }
 
     private static void editStudent(Scanner scanner, StudentList studentList) {

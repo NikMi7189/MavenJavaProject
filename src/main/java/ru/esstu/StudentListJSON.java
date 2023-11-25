@@ -25,7 +25,7 @@ public class StudentListJSON implements StudentList {
                 students.add(student);
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            ErrorHandler.handleException(e, "Ошибка при чтении списка студентов из JSON");
         }
         return students;
     }
@@ -38,7 +38,7 @@ public class StudentListJSON implements StudentList {
             jsonArray.put(jsonStudent);
             writeJSONArrayToJSONFile(jsonArray);
         } catch (IOException e) {
-            e.printStackTrace();
+            ErrorHandler.handleException(e, "Ошибка при добавлении студента в JSON");
         }
     }
 
@@ -53,7 +53,7 @@ public class StudentListJSON implements StudentList {
                 }
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            ErrorHandler.handleException(e, "Ошибка при получении студента из JSON по ID");
         }
         return null;
     }
@@ -71,7 +71,7 @@ public class StudentListJSON implements StudentList {
             }
             writeJSONArrayToJSONFile(newJsonArray);
         } catch (IOException e) {
-            e.printStackTrace();
+            ErrorHandler.handleException(e, "Ошибка при удалении студента из JSON");
         }
     }
 
@@ -91,7 +91,7 @@ public class StudentListJSON implements StudentList {
             }
             writeJSONArrayToJSONFile(newJsonArray);
         } catch (IOException e) {
-            e.printStackTrace();
+            ErrorHandler.handleException(e, "Ошибка при обновлении студента в JSON");
         }
     }
 

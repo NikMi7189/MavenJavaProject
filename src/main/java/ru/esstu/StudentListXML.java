@@ -11,6 +11,7 @@ import java.util.List;
 public class StudentListXML implements StudentList {
     private List<Student> students;
     private String xmlFileName;
+    private final String logFileName = "logXML";
 
     public StudentListXML(String xmlFileName) {
         this.xmlFileName = xmlFileName + ".xml";
@@ -76,12 +77,12 @@ public class StudentListXML implements StudentList {
 
             File file = new File(xmlFileName);
             if (file.exists()) {
-                FileInputStream fis = new FileInputStream(file);
-                students = (List<Student>) xstream.fromXML(fis);
-                fis.close();
+                try (FileInputStream fis = new FileInputStream(file)) {
+                    students = (List<Student>) xstream.fromXML(fis);
+                }
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            ErrorHandler.handleException(e, "Ошибка при загрузке данных из XML");
         }
     }
 
@@ -91,11 +92,11 @@ public class StudentListXML implements StudentList {
             xstream.alias("students", List.class);
             xstream.alias("student", Student.class);
 
-            FileOutputStream fos = new FileOutputStream(xmlFileName);
-            xstream.toXML(students, fos);
-            fos.close();
+            try (FileOutputStream fos = new FileOutputStream(xmlFileName)) {
+                xstream.toXML(students, fos);
+            }
         } catch (Exception e) {
-            e.printStackTrace();
+            ErrorHandler.handleException(e, "Ошибка при сохранении данных в XML");
         }
     }
 }

@@ -1,0 +1,186 @@
+Детали ошибки:
+Временная метка: 18 числа 11 месяца в 14:51
+Сигнатура ошибки: org.postgresql.util.PSQLException
+Сообщение исключения: ОШИБКА: повторяющееся значение ключа нарушает ограничение уникальности "Student_pkey"
+  Подробности: Ключ "(id)=(2)" уже существует.
+Сообщение об ошибке: Ошибка при добавлении студента
+Локация ошибки: ru.esstu.StudentListDatabase
+
+Стек вызовов:
+org.postgresql.util.PSQLException: ОШИБКА: повторяющееся значение ключа нарушает ограничение уникальности "Student_pkey"
+  Подробности: Ключ "(id)=(2)" уже существует.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2713)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2401)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:368)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:498)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:415)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:190)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:152)
+	at ru.esstu.StudentListDatabase.add(StudentListDatabase.java:63)
+	at org.example.Main.addStudent(Main.java:109)
+	at org.example.Main.main(Main.java:68)
+
+Детали ошибки:
+Временная метка: 18 числа 11 месяца в 15:10
+Сигнатура ошибки: org.postgresql.util.PSQLException
+Сообщение исключения: ОШИБКА: повторяющееся значение ключа нарушает ограничение уникальности "Student_pkey"
+  Подробности: Ключ "(id)=(2)" уже существует.
+Сообщение об ошибке: Ошибка при добавлении студента
+Метод вызвавший ошибку: add в классе ru.esstu.StudentListDatabase
+
+Стек вызовов:
+org.postgresql.util.PSQLException: ОШИБКА: повторяющееся значение ключа нарушает ограничение уникальности "Student_pkey"
+  Подробности: Ключ "(id)=(2)" уже существует.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2713)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2401)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:368)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:498)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:415)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:190)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:152)
+	at ru.esstu.StudentListDatabase.add(StudentListDatabase.java:63)
+	at org.example.Main.addStudent(Main.java:109)
+	at org.example.Main.main(Main.java:68)
+
+Детали ошибки:
+Временная метка: 18 числа 11 месяца в 15:12
+Сигнатура ошибки: org.postgresql.util.PSQLException
+Сообщение исключения: ОШИБКА: повторяющееся значение ключа нарушает ограничение уникальности "Student_pkey"
+  Подробности: Ключ "(id)=(2)" уже существует.
+Сообщение об ошибке: Ошибка при добавлении студента
+Причина возникновения ошибки: метод add класса ru.esstu.StudentListDatabase
+
+Стек вызовов:
+org.postgresql.util.PSQLException: ОШИБКА: повторяющееся значение ключа нарушает ограничение уникальности "Student_pkey"
+  Подробности: Ключ "(id)=(2)" уже существует.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2713)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2401)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:368)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:498)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:415)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:190)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:152)
+	at ru.esstu.StudentListDatabase.add(StudentListDatabase.java:63)
+	at org.example.Main.addStudent(Main.java:109)
+	at org.example.Main.main(Main.java:68)
+
+——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
+ВОЗНИКЛА ОШИБКА
+Детали:
+Временная метка: 18 числа 11 месяца в 15:19
+Сигнатура ошибки: org.postgresql.util.PSQLException
+Сообщение исключения: ОШИБКА: повторяющееся значение ключа нарушает ограничение уникальности "Student_pkey"
+  Подробности: Ключ "(id)=(2)" уже существует.
+Сообщение об ошибке: Ошибка при добавлении студента
+Причина возникновения ошибки: метод add класса ru.esstu.StudentListDatabase
+
+Стек вызовов:
+org.postgresql.util.PSQLException: ОШИБКА: повторяющееся значение ключа нарушает ограничение уникальности "Student_pkey"
+  Подробности: Ключ "(id)=(2)" уже существует.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2713)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2401)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:368)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:498)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:415)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:190)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:152)
+	at ru.esstu.StudentListDatabase.add(StudentListDatabase.java:63)
+	at org.example.Main.addStudent(Main.java:109)
+	at org.example.Main.main(Main.java:68)
+
+————————————————————————————————————————————————————————————————————————————————————————————————————
+ВОЗНИКЛА ОШИБКА
+Детали:
+Временная метка: 18 числа 11 месяца в 15:21
+Сигнатура ошибки: org.postgresql.util.PSQLException
+Сообщение исключения: ОШИБКА: повторяющееся значение ключа нарушает ограничение уникальности "Student_pkey"
+  Подробности: Ключ "(id)=(2)" уже существует.
+Сообщение об ошибке: Ошибка при добавлении студента
+Причина возникновения ошибки: метод add класса ru.esstu.StudentListDatabase
+
+Стек вызовов:
+org.postgresql.util.PSQLException: ОШИБКА: повторяющееся значение ключа нарушает ограничение уникальности "Student_pkey"
+  Подробности: Ключ "(id)=(2)" уже существует.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2713)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2401)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:368)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:498)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:415)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:190)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:152)
+	at ru.esstu.StudentListDatabase.add(StudentListDatabase.java:63)
+	at org.example.Main.addStudent(Main.java:109)
+	at org.example.Main.main(Main.java:68)
+
+————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
+ВОЗНИКЛА ОШИБКА
+Детали:
+Временная метка: 18 числа 11 месяца в 15:23
+Сигнатура ошибки: org.postgresql.util.PSQLException
+Сообщение исключения: ОШИБКА: повторяющееся значение ключа нарушает ограничение уникальности "Student_pkey"
+  Подробности: Ключ "(id)=(2)" уже существует.
+Сообщение об ошибке: Ошибка при добавлении студента
+Причина возникновения ошибки: метод add класса ru.esstu.StudentListDatabase
+
+Стек вызовов:
+org.postgresql.util.PSQLException: ОШИБКА: повторяющееся значение ключа нарушает ограничение уникальности "Student_pkey"
+  Подробности: Ключ "(id)=(2)" уже существует.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2713)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2401)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:368)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:498)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:415)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:190)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:152)
+	at ru.esstu.StudentListDatabase.add(StudentListDatabase.java:63)
+	at org.example.Main.addStudent(Main.java:109)
+	at org.example.Main.main(Main.java:68)
+
+————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
+ВОЗНИКЛА ОШИБКА
+Детали:
+Временная метка: 18 числа 11 месяца в 15:24
+Сигнатура ошибки: org.postgresql.util.PSQLException
+Сообщение исключения: ОШИБКА: повторяющееся значение ключа нарушает ограничение уникальности "Student_pkey"
+  Подробности: Ключ "(id)=(2)" уже существует.
+Сообщение об ошибке: Ошибка при добавлении студента
+Причина возникновения ошибки: метод add класса ru.esstu.StudentListDatabase
+
+Стек вызовов:
+org.postgresql.util.PSQLException: ОШИБКА: повторяющееся значение ключа нарушает ограничение уникальности "Student_pkey"
+  Подробности: Ключ "(id)=(2)" уже существует.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2713)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2401)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:368)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:498)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:415)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:190)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:152)
+	at ru.esstu.StudentListDatabase.add(StudentListDatabase.java:63)
+	at org.example.Main.addStudent(Main.java:109)
+	at org.example.Main.main(Main.java:68)
+
+————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
+ВОЗНИКЛА ОШИБКА
+Детали:
+Временная метка: 19 числа 11 месяца в 21:54
+Сигнатура ошибки: org.postgresql.util.PSQLException
+Сообщение исключения: ОШИБКА: повторяющееся значение ключа нарушает ограничение уникальности "Student_pkey"
+  Подробности: Ключ "(id)=(2)" уже существует.
+Сообщение об ошибке: Ошибка при добавлении студента
+Причина возникновения ошибки: метод add класса ru.esstu.StudentListDatabase
+
+Стек вызовов:
+org.postgresql.util.PSQLException: ОШИБКА: повторяющееся значение ключа нарушает ограничение уникальности "Student_pkey"
+  Подробности: Ключ "(id)=(2)" уже существует.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2713)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2401)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:368)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:498)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:415)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:190)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:152)
+	at ru.esstu.StudentListDatabase.add(StudentListDatabase.java:63)
+	at org.example.Main.addStudent(Main.java:109)
+	at org.example.Main.main(Main.java:68)
+
