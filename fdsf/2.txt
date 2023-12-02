@@ -1,0 +1,5 @@
+ID: 2
+First Name: Мария
+Last Name: Сидорова
+Partonymic Name: 
+Group: Инф102

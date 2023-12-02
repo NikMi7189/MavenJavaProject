@@ -1,0 +1,5 @@
+ID: 3
+First Name: Петр
+Last Name: Петров
+Partonymic Name: 
+Group: Инф103

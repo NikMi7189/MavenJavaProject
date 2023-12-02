@@ -11,23 +11,26 @@ public abstract class StudentListTest {
     void testAddAndGetAll() {
         StudentList studentList = createStudentList();
 
-        Student student1 = new Student("1", "John", "Doe", "", "CS101");
-        Student student2 = new Student("2", "Jane", "Doe", "", "CS102");
+        Student student1 = new Student("1", "Иван", "Иванов", "", "Инф101");
+        Student student2 = new Student("2", "Мария", "Сидорова", "", "Инф102");
+        Student student3 = new Student("3", "Петр", "Петров", "", "Инф103");
 
         studentList.add(student1);
         studentList.add(student2);
+        studentList.add(student3);
 
-        assertEquals(2, studentList.getAll().size());
+        assertEquals(3, studentList.getAll().size());
         assertTrue(studentList.getAll().contains(student1));
         assertTrue(studentList.getAll().contains(student2));
+        assertTrue(studentList.getAll().contains(student3));
     }
 
     @Test
     void testGetById() {
         StudentList studentList = createStudentList();
 
-        Student student1 = new Student("1", "John", "Doe", "", "CS101");
-        Student student2 = new Student("2", "Jane", "Doe", "", "CS102");
+        Student student1 = new Student("1", "Иван", "Иванов", "", "Инф101");
+        Student student2 = new Student("2", "Мария", "Сидорова", "", "Инф102");
 
         studentList.add(student1);
         studentList.add(student2);
@@ -41,8 +44,8 @@ public abstract class StudentListTest {
     void testUpdate() {
         StudentList studentList = createStudentList();
 
-        Student student1 = new Student("1", "John", "Doe", "", "CS101");
-        Student student2 = new Student("1", "Jane", "Doe", "", "CS102"); // Same ID as student1
+        Student student1 = new Student("1", "Иван", "Иванов", "", "Инф101");
+        Student student2 = new Student("1", "Мария", "Сидорова", "", "Инф102");
 
         studentList.add(student1);
         studentList.update(student2);
@@ -54,7 +57,35 @@ public abstract class StudentListTest {
     void testDelete() {
         StudentList studentList = createStudentList();
 
-        Student student1 = new Student("1", "John", "Doe", "", "CS101");
+        Student student1 = new Student("1", "Иван", "Иванов", "", "Инф101");
+
+        studentList.add(student1);
+        studentList.delete("1");
+
+        assertEquals(0, studentList.getAll().size());
+        assertNull(studentList.getById("1"));
+    }
+
+    @Test
+    void testAddAndUpdate() {
+        StudentList studentList = createStudentList();
+
+        Student student1 = new Student("1", "Иван", "Иванов", "", "Инф101");
+        Student student2 = new Student("1", "Мария", "Сидорова", "", "Инф102");
+
+        studentList.add(student1);
+        studentList.update(student2);
+
+        assertEquals(1, studentList.getAll().size());
+        assertEquals(student2, studentList.getById("1"));
+    }
+
+    @Test
+    void testAddAndDelete() {
+        StudentList studentList = createStudentList();
+
+        Student student1 = new Student("1", "Иван", "Иванов", "", "Инф101");
+
 
         studentList.add(student1);
         studentList.delete("1");
